@@ -67,7 +67,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Calendário
 
+function mudouTamanho(){
+    if (window.innerWidth >= 768) {
+        calendar.style.display = 'block'
+    } else {
+        calendar.style.display = 'none'
+    }
+}
 
+function clickMenu(){
+    if (calendar.style.display === 'block') {
+        calendar.style.display = 'none'
+    } else {
+        calendar.style.display = 'block'
+    }
+}
+window.onload = mudouTamanho;
 
 document.addEventListener('DOMContentLoaded', function() {
     const daysContainer = document.getElementById('days');
