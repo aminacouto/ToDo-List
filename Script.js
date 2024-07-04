@@ -60,6 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
     var ano = dataAtual.getFullYear();
     
-    var dataFormatada = dia + '/' + mes + '/' + ano;
+    var dataFormatada = dia + '-' + mes + '-' + ano;
     document.getElementById('dataAtual').innerText = dataFormatada;
 });

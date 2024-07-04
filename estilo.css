@@ -18,11 +18,12 @@ h1{
 }
 #dataAtual{
     font-family: "acme", sans-serif;
-    text-align: center;
+    text-align: right;
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px;
     text-shadow: 2px 2px 1px #000000b7;
+    transition-duration: 0.5s;
 }
 body, html{
     height: 100%;
@@ -43,6 +44,7 @@ body, html{
     width: 80vw;
     padding: 20px;
     margin: 50px auto 0px;
+    transition-duration: 0.5s;
 }
 
 .input{
@@ -89,7 +91,8 @@ body, html{
     margin-bottom: 10px;
     box-shadow: 3px 4px 5px #0000004f;
     height: 30px;
-    
+    transition-duration: 1s;
+
 }
 .itens:hover{
     cursor: pointer;
