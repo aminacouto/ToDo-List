@@ -63,3 +63,69 @@ document.addEventListener("DOMContentLoaded", function() {
     var dataFormatada = dia + '-' + mes + '-' + ano;
     document.getElementById('dataAtual').innerText = dataFormatada;
 });
+
+
+//Calendário
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const daysContainer = document.getElementById('days');
+    const monthYear = document.getElementById('month-year');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    const months = [
+        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+        'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ];
+
+    let currentMonth = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
+
+    function renderCalendar(month, year) {
+        daysContainer.innerHTML = '';
+        const firstDayOfMonth = new Date(year, month, 1).getDay();
+        const lastDateOfMonth = new Date(year, month + 1, 0).getDate();
+        const lastDayOfLastMonth = month === 0 ? new Date(year - 1, 11, 0).getDate() : new Date(year, month, 0).getDate();
+
+        // Month and year
+        monthYear.textContent = `${months[month]} ${year}`;
+
+        // Days of previous month
+        for (let i = firstDayOfMonth; i > 0; i--) {
+            daysContainer.innerHTML += `<div class="day inactive">${lastDayOfLastMonth - i + 1}</div>`;
+        }
+
+        // Days of current month
+        for (let i = 1; i <= lastDateOfMonth; i++) {
+            daysContainer.innerHTML += `<div class="day">${i}</div>`;
+        }
+
+        // Remaining days to fill the last row
+        const remainingDays = 42 - (firstDayOfMonth + lastDateOfMonth);
+        for (let i = 1; i <= remainingDays; i++) {
+            daysContainer.innerHTML += `<div class="day inactive">${i}</div>`;
+        }
+    }
+
+    prevButton.addEventListener('click', function() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+
+    nextButton.addEventListener('click', function() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+
+    renderCalendar(currentMonth, currentYear);
+});

@@ -18,22 +18,31 @@ h1{
 }
 #dataAtual{
     font-family: "acme", sans-serif;
-    text-align: right;
-    margin-top: 20px;
+    text-align: center;
     font-size: 20px;
-    padding: 10px;
+    color: rgba(250, 235, 215, 0.781);
+    padding: 2px;
     text-shadow: 2px 2px 1px #000000b7;
     transition-duration: 0.5s;
 }
 body, html{
-    height: 100%;
-    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #002020;
     color: aliceblue;
     background-image: url(imagens/fundo\ retrato.png);
     background-size: cover;
 }
 
-
+.buttonCalendar {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+}
 .conteiner {
     display: block;
     position: relative;
@@ -42,7 +51,7 @@ body, html{
     border: 0.5px solid #002020;
     border-radius: 20px;
     width: 80vw;
-    padding: 20px;
+    padding: 10px 20px;
     margin: 50px auto 0px;
     transition-duration: 0.5s;
 }
@@ -55,14 +64,15 @@ body, html{
     width: 60vw;
     height: 30px;
     background-color: #002020;
-    box-shadow: 3px 4px 5px #0000004f;
+    box-shadow: 1px 2px 2px #0000004f;
     color: aliceblue;
 
 }
 .input:focus{
-    outline: none;}
+    outline: none;
+}
 .button-add {
-    box-shadow: 3px 4px 5px #0000004f;
+    box-shadow: 1px 2px 2px #0000004f;
     background-color: #002020;
     color: aliceblue;
     padding: 6px 10px;
@@ -117,8 +127,95 @@ img:hover{
     text-decoration: line-through;
     transition: 1s;
 }
+/* Calendário */
+.calendar {
+    display: ;
+    position: absolute;
+    top: 65px;
+    right: 10px; 
+    width: 400px;
+    height: 200px;
+    background-color: #001313;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 12px;
+    opacity: 90%;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #001313;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.596);
+    color: white;
+}
+.calendar-header .nav {
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+.calendar-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.day-of-week {
+    width: 14%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days .day {
+    width: 14%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.days .day:hover {
+    background-color: #8d3f00;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.days .day.inactive {
+    color: #cccccc5d;
+}
 
 
+footer{
+    display: block;
+    position: fixed;
+    background-color: #00131391;
+    color: rgba(240, 248, 255, 0.589);
+    width: 100vw;
+    bottom: 0px;
+    padding: 6px;
+    margin: 0px;
+    font-size: 10px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.589);
+}
+a:hover{
+    text-decoration: underline;
+    color: rgba(240, 248, 255, 0.781);
+    ;
+}
 /*telas médias*/
 @media (min-width: 768px) and (max-width: 1023px) {
     .conteiner {
@@ -127,6 +224,7 @@ img:hover{
     .input {
         width: 45vw;
     }
+
 }
 /*telas grandes*/
 @media (min-width: 1024px) {

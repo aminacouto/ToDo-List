@@ -17,8 +17,9 @@
     <h1>To Do List</h1>
 </header>
 <body>
-    <div id="dataAtual"> </div>
+    <button><img class="buttonCalendar" src="imagens/calendar.png" alt="calendário"></button>
     <div class="conteiner">
+        <div id="dataAtual"> </div>
         <input type="text" class="input" id="idInput" placeholder="Adicionar tarefa..." required>
         <button class="button-add"><strong>+</strong></button>
 
@@ -26,6 +27,32 @@
             
         </ul>
     </div>
+
+    <div class="calendar">
+        <div class="calendar-header">
+            <span id="prev" class="nav">&lt;</span>
+            <span id="month-year"></span>
+            <span id="next" class="nav">&gt;</span>
+        </div>
+        <div class="calendar-body">
+            <div class="day-of-week">Dom</div>
+            <div class="day-of-week">Seg</div>
+            <div class="day-of-week">Ter</div>
+            <div class="day-of-week">Qua</div>
+            <div class="day-of-week">Qui</div>
+            <div class="day-of-week">Sex</div>
+            <div class="day-of-week">Sáb</div>
+            <div id="days" class="days"></div>
+        </div>
+    </div>
+    <footer>
+        <p> Contatos: 
+            <a href="https://www.linkedin.com/in/amina-do-couto-11836521a/" target="_blank">LinkedIn</a>
+            |
+            <a href="https://github.com/aminacouto" target="_blank">GitHub</a>
+        </p>
+        <p>&copy;2024 Amina do Couto Cavalheiro</p>
+    </footer>
 </body>
 <script src="Script.js"></script>
 </html>
