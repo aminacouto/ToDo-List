@@ -51,6 +51,7 @@ body, html{
     border: none;
     border-radius: 5px;
     padding-left: 10px;
+    margin: 10px;
     width: 60vw;
     height: 30px;
     background-color: #002020;
@@ -58,6 +59,8 @@ body, html{
     color: aliceblue;
 
 }
+.input:focus{
+    outline: none;}
 .button-add {
     box-shadow: 3px 4px 5px #0000004f;
     background-color: #002020;
@@ -65,9 +68,11 @@ body, html{
     padding: 6px 10px;
     border: none;
     border-radius: 5px;
+    margin: 10px;
     height: 30px;
     float: right;
     cursor: pointer;
+
 }
 .button-add:hover{
     opacity: 0.8;
@@ -101,14 +106,18 @@ img{
     height: 20px;
 }
 img:hover{
+    background-color: #000000;
+    border-radius: 50%;
     height: 21px;
+    opacity: 0.5;
 }
+
 .done {
     background-color: #002020;
     text-decoration: line-through;
     transition: 1s;
-
 }
+
 
 /*telas médias*/
 @media (min-width: 768px) and (max-width: 1023px) {
