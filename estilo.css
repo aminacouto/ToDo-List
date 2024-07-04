@@ -39,9 +39,14 @@ body, html{
     display: block;
     position: fixed;
     top: 20px;
-    right: 10px;
+    right: 12px;
     cursor: pointer;
-    width: 16px;
+    width: 12px;
+    padding: 2px;
+}
+#buttonCalendar:hover{
+    width: 13px;
+    opacity: 80%;
 }
 .conteiner {
     display: block;
