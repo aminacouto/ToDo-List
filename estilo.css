@@ -39,15 +39,18 @@ body, html{
 #buttonCalendar {
     display: block;
     position: fixed;
-    top: 20px;
-    right: 12px;
+    background-color: #001313;
+    box-shadow: 1px 2px 2px #0000004f;
+    border-radius: 50%;
+    top: 12px;
+    right: 20px;
     cursor: pointer;
-    width: 12px;
-    padding: 2px;
+    padding: 8px;
+
 }
 #buttonCalendar:hover{
-    width: 13px;
     opacity: 80%;
+    box-shadow: 1px 1px 1px black;
 }
 .conteiner {
     display: block;
@@ -136,7 +139,7 @@ img:hover{
 /* Calendário */
 .calendar {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 65px;
     right: 10px; 
     width: 400px;
@@ -225,7 +228,7 @@ a:hover{
 /*telas médias*/
 @media (min-width: 768px) and (max-width: 1023px) {
     .calendar{
-        display: block;
+        display: none;
         
     }
     .conteiner {
@@ -241,6 +244,10 @@ a:hover{
 @media (min-width: 1024px) {
     body, html {
         background-image: url(imagens/fundo\ paisagem.png);
+    }
+    .calendar{
+        display: none;
+        
     }
     .conteiner {
         width: 40vw;
