@@ -33,6 +33,7 @@ body, html{
     color: aliceblue;
     background-image: url(imagens/fundo\ retrato.png);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #buttonCalendar {
