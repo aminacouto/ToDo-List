@@ -20,12 +20,16 @@
 <body onresize="mudouTamanho()">
     <div class="conteiner">
         <div id="dataAtual"> </div>
-        <input type="text" class="input" id="idInput" placeholder="Adicionar tarefa..." required>
-        <button class="button-add"><strong>+</strong></button>
+        <div id="cabecalhoAdd">
+            <input type="text" class="input" id="idInput" placeholder="Adicionar tarefa..." required>
+            <button class="button-add"><strong>+</strong></button>
+        </div>
 
-        <ul class="lista">
+        <div id="tarefas">
+            <ul class="lista">
             
-        </ul>
+            </ul>
+        </div>
     </div>
     <span class="material-symbols-outlined" id="buttonCalendar" onclick="clickMenu()">calendar_month</span>
         <div class="calendar" id="calendar">
